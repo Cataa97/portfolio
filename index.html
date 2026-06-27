@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Catalina Castillo | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portafolio profesional de Catalina Castillo - Ingeniera de Sistemas y Desarrolladora Full Stack especializada en desarrollo de software, ciberseguridad y soporte de redes.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container custom-scrollbar overflow-x-hidden">
+
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-white/10 z-50 h-20 flex items-center">
+    <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+      <a href="#inicio" class="font-headline-sm text-headline-sm text-primary tracking-tight cursor-pointer hover:opacity-80 transition-opacity">
+        Catalina Castillo
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <div class="hidden md:flex gap-8 items-center">
+        <a class="nav-link-desktop font-body-md text-body-md text-primary font-bold border-b-2 border-secondary-container pb-1 cursor-pointer" href="#inicio">Inicio</a>
+        <a class="nav-link-desktop font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#sobre-mi">Sobre mí</a>
+        <a class="nav-link-desktop font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#proyectos">Proyectos</a>
+        <a class="nav-link-desktop font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#experiencia">Experiencia</a>
+        <a class="nav-link-desktop font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#contacto">Contacto</a>
+      </div>
+      
+      <div class="flex items-center gap-4">
+        <a href="/CV_Catalina_Castillo.pdf" download class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all cursor-pointer active:scale-95 text-center hidden sm:inline-block">
+          Descargar CV
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="fixed top-20 left-0 w-full bg-background/95 backdrop-blur-md border-b border-white/10 z-40 hidden flex-col py-4 px-margin-mobile gap-4 animate-in slide-in-from-top duration-300">
+    <a class="nav-link-mobile font-body-md text-body-md text-primary font-bold p-3 rounded-lg" href="#inicio">Inicio</a>
+    <a class="nav-link-mobile font-body-md text-body-md text-on-surface-variant p-3 rounded-lg hover:bg-surface-container" href="#sobre-mi">Sobre mí</a>
+    <a class="nav-link-mobile font-body-md text-body-md text-on-surface-variant p-3 rounded-lg hover:bg-surface-container" href="#proyectos">Proyectos</a>
+    <a class="nav-link-mobile font-body-md text-body-md text-on-surface-variant p-3 rounded-lg hover:bg-surface-container" href="#experiencia">Experiencia</a>
+    <a class="nav-link-mobile font-body-md text-body-md text-on-surface-variant p-3 rounded-lg hover:bg-surface-container" href="#contacto">Contacto</a>
+    <a href="/CV_Catalina_Castillo.pdf" download class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all text-center">
+      Descargar CV
+    </a>
+  </div>
+
+  <!-- Main Content Space -->
+  <main class="w-full">
+    
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-section min-h-screen pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col justify-center items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center w-full">
+        <!-- Text details -->
+        <div class="lg:col-span-7 space-y-6 text-left animate-in fade-in slide-in-from-left duration-700">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-white/10">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+            <span class="font-label-md text-[12px] text-[#6ffbbe]">Disponible para nuevos proyectos</span>
+          </div>
+          <h1 class="font-headline-lg text-headline-lg md:text-5xl lg:text-6xl text-primary tracking-tight leading-tight">
+            Diseñando soluciones <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-fixed-dim to-secondary-container">Full Stack</span> robustas y seguras.
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            TNS en Computación Informática Mención Ciberseguridad, desarrollo de software y administración de plataformas TI críticas con precisión y elegancia técnica.
+          </p>
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 pt-2 items-center">
+            <a href="#proyectos" class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2">
+              Ver Proyectos
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+            <a href="#contacto" class="glass-card text-primary px-8 py-3 rounded-lg font-label-md hover:text-secondary-fixed-dim transition-all active:scale-95">
+              Contáctame
+            </a>
+            <!-- LinkedIn & GitHub Icon Links -->
+            <div class="flex items-center gap-3">
+              <a class="w-12 h-12 rounded-lg glass-card flex items-center justify-center text-primary hover:text-secondary-fixed-dim hover:border-secondary/50 transition-all active:scale-95 border border-white/10" href="https://www.linkedin.com/in/catalinacastillor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/>
+                </svg>
+              </a>
+              <a class="w-12 h-12 rounded-lg glass-card flex items-center justify-center text-primary hover:text-secondary-fixed-dim hover:border-secondary/50 transition-all active:scale-95 border border-white/10" href="https://github.com/Cataa97" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Quick Stat Indicators -->
+          <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/5 max-w-md">
+            <div>
+              <p class="font-headline-md text-headline-md text-primary font-bold">2+</p>
+              <p class="font-label-md text-[12px] text-on-surface-variant">Años de Exp.</p>
+            </div>
+            <div>
+              <p class="font-headline-md text-headline-md text-primary font-bold">3+</p>
+              <p class="font-label-md text-[12px] text-on-surface-variant">Proyectos Clave</p>
+            </div>
+            <div>
+              <p class="font-headline-md text-headline-md text-primary font-bold">6+</p>
+              <p class="font-label-md text-[12px] text-on-surface-variant">Diplomas/Cert.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal/IDE Mockup -->
+        <div class="lg:col-span-5 flex justify-center w-full animate-in fade-in slide-in-from-right duration-700">
+          <div class="glass-card rounded-xl p-5 border border-white/10 shadow-2xl relative overflow-hidden font-label-md text-label-md max-w-lg w-full">
+            <!-- Window Header controls -->
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+              <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+              <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+              <span class="text-on-surface-variant text-[12px] ml-2 font-mono">catalina@systems-fullstack:~</span>
+            </div>
+            <!-- Code/Terminal lines -->
+            <div class="space-y-2 text-left font-mono text-on-surface">
+              <p class="text-secondary"><span class="text-on-surface-variant">$</span> cat catalina.json</p>
+              <div class="pl-4 text-on-surface-variant text-[13px] leading-relaxed">
+                <span>{</span>
+                <p class="pl-4"><span class="text-secondary-fixed-dim">"degree"</span>: <span class="text-[#6ffbbe]">"TNS en Informática"</span>,</p>
+                <p class="pl-4"><span class="text-secondary-fixed-dim">"skills"</span>: <span class="text-[#6ffbbe]">["Full Stack", "SecOps", "SysAdmin"]</span>,</p>
+                <p class="pl-4"><span class="text-secondary-fixed-dim">"tech"</span>: <span class="text-[#6ffbbe]">["Python", "JS", "React", "SQL", "PostgreSQL", "Docker", "Networking"]</span>,</p>
+                <p class="pl-4"><span class="text-secondary-fixed-dim">"location"</span>: <span class="text-[#6ffbbe]">"Santiago, Chile"</span></p>
+                <span>}</span>
+              </div>
+              <p class="text-secondary mt-3"><span class="text-on-surface-variant">$</span> check --security-status</p>
+              <p class="text-on-surface-variant text-[12px] animate-pulse">Running cryptography audit...</p>
+              <p class="text-green-400 text-[12px]">✓ All systems operational. Network secure. 🛡️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sobre Mí & Stack Section -->
+    <section id="sobre-mi" class="reveal py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">👤</span>
+        <h2 class="font-headline-lg text-headline-lg tracking-tight">Sobre mí</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+        
+        <!-- Column 1: Avatar Photo -->
+        <div class="lg:col-span-4 flex flex-col items-center justify-center space-y-4">
+          <div class="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden glass-card p-2 border border-white/10 group shadow-2xl">
+            <!-- Glow effect on hover -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-secondary-container/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <img class="w-full h-full object-cover rounded-xl transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" src="/images/avatar.png" alt="Catalina Castillo" />
+          </div>
+          <div class="text-center">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Catalina Castillo</h3>
+            <p class="font-label-md text-label-md text-secondary font-mono">TNS en Informática / Full Stack Dev / Mención Ciberseguridad</p>
+          </div>
+        </div>
+
+        <!-- Column 2: Biography -->
+        <div class="lg:col-span-4 space-y-6">
+          <p class="font-body-lg text-body-lg text-primary leading-relaxed">
+            Soy Técnico en Computación e Informática con mención en Ciberseguridad. Cuento con experiencia práctica en desarrollo web fullstack, soporte técnico, redes, sistemas operativos y buenas prácticas de seguridad. Arquitectura y desarrollo de proyectos completos.
+          </p>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Mi enfoque profesional combina la agilidad del desarrollo de software Full Stack con la solidez de la ciberseguridad.
+          </p>
+          <div class="glass-card p-6 rounded-xl border-l-4 border-l-secondary-container">
+            <p class="font-label-md text-label-md text-on-surface italic">
+              "El código seguro y la optimización de infraestructura no son opcionales; son los cimientos sobre los que descansa cualquier solución exitosa."
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 3: Tech Stack Grid -->
+        <div class="lg:col-span-4 space-y-6">
+          <h3 class="font-headline-sm text-headline-sm text-primary">Tecnologías</h3>
+          <div class="grid grid-cols-2 gap-4">
+            
+            <!-- Tech item 1 -->
+            <div class="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 hover:border-secondary-container/50 hover:shadow-[0_4px_20px_rgba(5,102,217,0.15)] transition-all">
+              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-2xl">terminal</span>
+              </div>
+              <span class="font-label-md text-label-md text-primary">Python</span>
+              <span class="text-[11px] text-on-surface-variant">Scripts & Apps</span>
+            </div>
+
+            <!-- Tech item 2 -->
+            <div class="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 hover:border-secondary-container/50 hover:shadow-[0_4px_20px_rgba(5,102,217,0.15)] transition-all">
+              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-2xl">code</span>
+              </div>
+              <span class="font-label-md text-label-md text-primary">React / JS</span>
+              <span class="text-[11px] text-on-surface-variant">Frontend Apps</span>
+            </div>
+
+            <!-- Tech item 3 -->
+            <div class="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 hover:border-secondary-container/50 hover:shadow-[0_4px_20px_rgba(5,102,217,0.15)] transition-all">
+              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-2xl">shield</span>
+              </div>
+              <span class="font-label-md text-label-md text-primary">Seguridad</span>
+              <span class="text-[11px] text-on-surface-variant">InfoSec & Ciber</span>
+            </div>
+
+            <!-- Tech item 4 -->
+            <div class="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 hover:border-secondary-container/50 hover:shadow-[0_4px_20px_rgba(5,102,217,0.15)] transition-all">
+              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-2xl">dns</span>
+              </div>
+              <span class="font-label-md text-label-md text-primary">Redes / DNS</span>
+              <span class="text-[11px] text-on-surface-variant">Routing & Proxies</span>
+            </div>
+
+            <!-- Tech item 5 -->
+            <div class="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 hover:border-secondary-container/50 hover:shadow-[0_4px_20px_rgba(5,102,217,0.15)] transition-all">
+              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-2xl">groups</span>
+              </div>
+              <span class="font-label-md text-label-md text-primary">Active Directory</span>
+              <span class="text-[11px] text-on-surface-variant">Microsoft AD</span>
+            </div>
+
+            <!-- Tech item 6 -->
+            <div class="glass-panel p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 hover:border-secondary-container/50 hover:shadow-[0_4px_20px_rgba(5,102,217,0.15)] transition-all">
+              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-2xl">database</span>
+              </div>
+              <span class="font-label-md text-label-md text-primary">SQL</span>
+              <span class="text-[11px] text-on-surface-variant">BBDD Relacionales</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="reveal py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
+      <!-- Section Header -->
+      <header class="flex flex-col items-start text-left">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-secondary text-3xl">construction</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Proyectos</h2>
+        </div>
+        <p class="max-w-2xl text-on-surface-variant font-body-lg text-body-lg">
+          Una selección de herramientas y sistemas desarrollados con enfoque en la eficiencia, seguridad y experiencia de usuario.
+        </p>
+      </header>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        
+        <!-- Project Card: Ezer -->
+        <article class="project-card glass-panel rounded-xl overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)]">
+          <div class="p-6 flex flex-col h-full">
+            <div class="relative rounded-lg overflow-hidden mb-6 aspect-video bg-surface-container-highest">
+              <img class="project-image w-full h-full object-cover transition-transform duration-700" alt="Plataforma de planificación pedagógica y evaluación Ezer" src="/images/ezer.png"/>
+            </div>
+            <div class="flex flex-col gap-4 flex-grow">
+              <h3 class="font-headline-sm text-headline-sm text-primary">Ezer</h3>
+              <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed flex-grow">
+                Plataforma integral que reúne evaluaciones, asistencia y planificación pedagógica en un solo lugar. Entrega a equipos directivos y UTP información clara y accionable para acompañar docentes, focalizar apoyos y mejorar resultados de aprendizaje sin sobrecarga administrativa.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Python</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Azure SQL Database</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Planificación Docente</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Gestión UTP</span>
+              </div>
+              <div class="flex items-center justify-end mt-auto pt-4 border-t border-white/5">
+                <a href="https://www.ezer.cl/" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-tint active:scale-95 transition-all w-full justify-center">
+                  <span class="material-symbols-outlined text-lg">open_in_new</span>
+                  <span class="font-label-md">Visitar Sitio Web</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card: Convive Seguro -->
+        <article class="project-card glass-panel rounded-xl overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)]">
+          <div class="p-6 flex flex-col h-full">
+            <div class="relative rounded-lg overflow-hidden mb-6 aspect-video bg-surface-container-highest">
+              <img class="project-image w-full h-full object-cover transition-transform duration-700" alt="Plataforma de retiro escolar y enfermería Convive Seguro" src="/images/convive.png"/>
+            </div>
+            <div class="flex flex-col gap-4 flex-grow">
+              <h3 class="font-headline-sm text-headline-sm text-primary">Convive Seguro</h3>
+              <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed flex-grow">
+                Plataforma que centraliza el retiro seguro de alumnos, control de acceso al establecimiento y gestión de enfermería escolar. Todo en tiempo real, accesible desde cualquier dispositivo para garantizar la seguridad y tranquilidad escolar.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Python</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Azure SQL Database</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Tiempo Real</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Seguridad Escolar</span>
+              </div>
+              <div class="flex items-center justify-end mt-auto pt-4 border-t border-white/5">
+                <a href="https://conviveseguro.cl/" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-tint active:scale-95 transition-all w-full justify-center">
+                  <span class="material-symbols-outlined text-lg">open_in_new</span>
+                  <span class="font-label-md">Visitar Sitio Web</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card: FrahdaStudio -->
+        <article class="project-card glass-panel rounded-xl overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)]">
+          <div class="p-6 flex flex-col h-full">
+            <div class="relative rounded-lg overflow-hidden mb-6 aspect-video bg-surface-container-highest">
+              <img class="project-image w-full h-full object-cover transition-transform duration-700" alt="E-commerce y pasarela de pago FrahdaStudio" src="/images/frahda.png"/>
+            </div>
+            <div class="flex flex-col gap-4 flex-grow">
+              <h3 class="font-headline-sm text-headline-sm text-primary">FrahdaStudio</h3>
+              <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed flex-grow">
+                E-commerce y pasarela de pago desarrollada a medida con código 100% propio (sin frameworks comerciales ni CMS como Shopify o WooCommerce). Incluye pasarela de pago integrada, sistema robusto de gestión de inventarios y agendamiento automático de citas en tiempo real.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Python</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">E-Commerce A Medida</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Pasarela de Pagos</span>
+                <span class="px-3 py-1 rounded bg-surface-container-high border border-white/5 text-label-md font-label-md">Agendamiento</span>
+              </div>
+              <div class="flex items-center justify-end mt-auto pt-4 border-t border-white/5">
+                <a href="https://www.frahdastudio.com/" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-tint active:scale-95 transition-all w-full justify-center">
+                  <span class="material-symbols-outlined text-lg">open_in_new</span>
+                  <span class="font-label-md">Visitar Sitio Web</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Experiencia Laboral Section -->
+    <section id="experiencia" class="reveal py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-16">
+      
+      <!-- Experiencia Header -->
+      <div class="space-y-16">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl">💼</span>
+          <h2 class="font-headline-lg text-headline-lg tracking-tight">Experiencia Laboral</h2>
+        </div>
+        
+        <!-- Job 1: Athena Venture -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-12 border-b border-white/5">
+          <!-- Left: Company & Meta -->
+          <div class="md:col-span-5 space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center p-3 border border-white/10">
+                <img class="w-full h-full object-contain" alt="Logo de Athena Venture" src="/images/athena_venture.png"/>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Full Stack Developer</h3>
+                <p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-4">Athena Venture</p>
+                <div class="flex flex-wrap gap-4 text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    mar. 2026 - abr. 2026
+                  </span>
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">location_on</span>
+                    RM, Chile
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-surface-container-low border border-white/5 space-y-4">
+              <h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Stack Tecnológico Utilizado</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Python</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Django</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">React</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">PostgreSQL</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">CI/CD</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Despliegue Cloud</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Responsibilities -->
+          <div class="md:col-span-7 glass-card p-8 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1 h-full timeline-line"></div>
+            <p class="font-body-lg text-body-lg text-primary mb-6">Mis responsabilidades y aportes principales:</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Desarrollo de aplicaciones web dinámicas y responsivas.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Arquitectura e implementación de Backend, base de datos y APIs RESTful.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Integración de pasarelas de pago de forma segura y eficiente.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Despliegue y administración de la infraestructura de la aplicación en la nube (Cloud).</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 2: Ceduc UCN -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-12 border-b border-white/5">
+          <!-- Left: Company & Meta -->
+          <div class="md:col-span-5 space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center p-3 border border-white/10">
+                <img class="w-full h-full object-contain" alt="Logo de Ceduc UCN" src="/images/ceduc.png"/>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Tutorías de Programación</h3>
+                <p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-4">Ceduc UCN</p>
+                <div class="flex flex-wrap gap-4 text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    abr. 2025
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-surface-container-low border border-white/5 space-y-4">
+              <h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Stack Tecnológico Utilizado</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Programación Lógica</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Algoritmos</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Educación TI</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Responsibilities -->
+          <div class="md:col-span-7 glass-card p-8 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1 h-full timeline-line"></div>
+            <p class="font-body-lg text-body-lg text-primary mb-6">Mis responsabilidades y aportes principales:</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Brindar apoyo académico y tutoría técnica a estudiantes de primer año.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Explicación didáctica de fundamentos de programación, estructuras de datos y lógica computacional.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Resolución conjunta de ejercicios prácticos y guía en mejores prácticas de desarrollo.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 3: Multidev -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-12 border-b border-white/5">
+          <!-- Left: Company & Meta -->
+          <div class="md:col-span-5 space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center border border-white/10 text-secondary text-xl font-bold font-mono">
+                MD
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Full Stack Junior</h3>
+                <p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-4">Multidev</p>
+                <div class="flex flex-wrap gap-4 text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    2022 - 2023
+                  </span>
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">location_on</span>
+                    RM, Chile
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-surface-container-low border border-white/5 space-y-4">
+              <h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Stack Tecnológico Utilizado</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">WordPress</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">PHP</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">JavaScript</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">CSS / HTML</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Responsibilities -->
+          <div class="md:col-span-7 glass-card p-8 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1 h-full timeline-line"></div>
+            <p class="font-body-lg text-body-lg text-primary mb-6">Mis responsabilidades y aportes principales:</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Desarrollo y mantención correctiva/evolutiva de sitios WordPress.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Implementación y depuración de componentes lógicos front-end y back-end en aplicaciones web.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 4: LarnU -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <!-- Left: Company & Meta -->
+          <div class="md:col-span-5 space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center p-3 border border-white/10">
+                <img class="w-full h-full object-contain" alt="Logo de LarnU" src="/images/larnu.jpg"/>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Full Stack Developer Trainee</h3>
+                <p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-4">LarnU</p>
+                <div class="flex flex-wrap gap-4 text-on-surface-variant font-label-md text-label-md">
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    dic. 2022
+                  </span>
+                  <span class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">location_on</span>
+                    RM, Chile
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-surface-container-low border border-white/5 space-y-4">
+              <h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Stack Tecnológico Utilizado</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">NodeJS</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">REST APIs</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">React UI</span>
+                <span class="px-3 py-1 rounded bg-surface-container-highest border border-white/5 text-on-surface-variant font-label-md text-label-md">Git</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Responsibilities -->
+          <div class="md:col-span-7 glass-card p-8 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1 h-full timeline-line"></div>
+            <p class="font-body-lg text-body-lg text-primary mb-6">Mis responsabilidades y aportes principales:</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Diseño y desarrollo de endpoints REST API en backend.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Creación e integración de componentes UI reutilizables y modulares en frontend.</p>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary-container mt-1">arrow_right</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Configuración y sincronización básica de seeds para bases de datos y entornos locales frontend-backend.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diplomas y Certificados Section -->
+    <section id="certificados" class="reveal py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">📜</span>
+        <h2 class="font-headline-lg text-headline-lg tracking-tight">Educación y Certificaciones</h2>
+      </div>
+        
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        
+        <!-- Certificado 1: CEDUC UCN -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Técnico en Computación e Informática CEDUC UCN" src="/images/ceduc.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2" style="display: none;">
+              <span class="material-symbols-outlined text-5xl">school</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">CEDUC UCN</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Técnico en Computación e Informática</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">Mención Ciberseguridad • CEDUC UCN</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                2024 - 2026
+              </span>
+              <span class="px-3 py-1 rounded bg-[#6ffbbe]/10 text-[#6ffbbe] border border-[#6ffbbe]/20 font-label-md text-label-md">
+                Egreso Académico (Título en Trámite)
+              </span>
+            </div>
+            <div class="flex items-center gap-3 font-label-md text-label-md text-secondary mt-auto">
+              <span class="material-symbols-outlined text-lg">school</span>
+              <span>Estado: Egresada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 2: Desafío Latam -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Análisis de datos con Python Desafío Latam" src="/images/desafiolatam_logo.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2" style="display: none;">
+              <span class="material-symbols-outlined text-5xl">analytics</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">Desafío Latam</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Domina el análisis de datos con Python</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">Desafío Latam</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                Año 2026
+              </span>
+              <span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary-fixed-dim font-label-md text-label-md">
+                Análisis de Datos
+              </span>
+            </div>
+            <button class="flex items-center gap-3 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer mt-auto" data-cert="/images/cerf_analisis de datos.png">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span>Ver certificado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificado 3: Linux Unhatched -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Linux Unhatched CISCO" src="/images/linux.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2">
+              <span class="material-symbols-outlined text-5xl">terminal</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">CISCO</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Linux Unhatched</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">CISCO Networking Academy</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                Junio 2025
+              </span>
+              <span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary-fixed-dim font-label-md text-label-md">
+                Sistemas Operativos
+              </span>
+            </div>
+            <button class="flex items-center gap-3 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer mt-auto" data-cert="/images/cert_linux.png">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span>Ver certificado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificado 4: Scrum Foundation Learner -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Scrum Foundation Learner CertiProf" src="/images/scrum.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2">
+              <span class="material-symbols-outlined text-5xl">groups</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">CertiProf</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Scrum Foundation Learner</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">CertiProf</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                Año 2025
+              </span>
+              <span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary-fixed-dim font-label-md text-label-md">
+                Metodologías Ágiles
+              </span>
+            </div>
+            <a href="https://www.credly.com/earner/earned/badge/ec5b355d-b728-4ae2-8732-7cdcd4ae8021" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer mt-auto">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span>Ver certificado</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificado 5: Introduction to Cybersecurity -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Introduction to Cybersecurity CISCO" src="/images/intro_ciber.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2">
+              <span class="material-symbols-outlined text-5xl">shield</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">CISCO</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Introduction to Cybersecurity</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">CISCO Networking Academy</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                Año 2025
+              </span>
+              <span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary-fixed-dim font-label-md text-label-md">
+                Ciberseguridad
+              </span>
+            </div>
+            <button class="flex items-center gap-3 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer mt-auto" data-cert="/images/cert_intro_ciber.png">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span>Ver certificado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificado 6: Computer Hardware Basics -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Computer Hardware Basics CISCO" src="/images/computer_hardware.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2">
+              <span class="material-symbols-outlined text-5xl">dns</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">CISCO</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Computer Hardware Basics</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">CISCO Networking Academy</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                Abril 06, 2024
+              </span>
+              <span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary-fixed-dim font-label-md text-label-md">
+                Hardware
+              </span>
+            </div>
+            <button class="flex items-center gap-3 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer mt-auto" data-cert="/images/cert_conceptos_basicos_hw.png">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span>Ver certificado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificado 7: Full Stack Developer -->
+        <div class="glass-card rounded-2xl overflow-hidden group flex flex-col h-full">
+          <div class="relative h-48 overflow-hidden bg-gradient-to-tr from-secondary-container/10 to-surface-container flex items-center justify-center border-b border-white/5">
+            <img class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105" alt="Full Stack Developer LarnU" src="/images/larnu.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-secondary-fixed-dim/60 space-y-2">
+              <span class="material-symbols-outlined text-5xl">code</span>
+              <span class="text-[12px] font-mono uppercase tracking-widest text-on-surface-variant">LarnU</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Full Stack Developer</h3>
+            <p class="text-on-surface-variant font-mono text-[12px] mb-4">LarnU</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-block px-3 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">
+                Año 2022
+              </span>
+              <span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary-fixed-dim font-label-md text-label-md">
+                Desarrollo Full Stack
+              </span>
+            </div>
+            <button class="flex items-center gap-3 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer mt-auto" data-cert="/images/cert_full_stack.png">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span>Ver certificado</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="reveal py-20 bg-surface-container-lowest/50 w-full border-t border-white/5">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid lg:grid-cols-12 gap-gutter items-start">
+          
+          <!-- Intro Section -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">✉️</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Contacto</h2>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                ¿Tienes un proyecto en mente o quieres charlar sobre tecnología? No dudes en escribirme. Siempre estoy abierta a nuevas oportunidades y colaboraciones.
+              </p>
+            </div>
+            
+            <!-- Contact Details -->
+            <div class="space-y-6">
+              <div class="flex items-center gap-4 group cursor-pointer">
+                <div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <p class="font-label-md text-label-md text-on-surface-variant">Correo electrónico</p>
+                  <p class="font-body-md text-body-md text-primary">catalina.castillo.rey@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 group cursor-pointer">
+                <div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <p class="font-label-md text-label-md text-on-surface-variant">Ubicación</p>
+                  <p class="font-body-md text-body-md text-primary">Santiago, Chile</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Social Icons -->
+            <div class="flex gap-4">
+              <a class="w-14 h-14 rounded-xl glass-card flex items-center justify-center text-on-surface hover:text-secondary hover:border-secondary/50 transition-all duration-300 group" href="https://github.com/Cataa97" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+              <a class="w-14 h-14 rounded-xl glass-card flex items-center justify-center text-on-surface hover:text-secondary hover:border-secondary/50 transition-all duration-300" href="https://www.linkedin.com/in/catalinacastillor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Section -->
+          <div class="lg:col-span-7">
+            <div class="glass-card p-8 md:p-10 rounded-xl">
+              <form class="space-y-6" id="contact-form">
+                <!-- Tu clave de acceso de Web3Forms -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"/>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label class="font-label-md text-label-md text-on-surface-variant" for="name">Nombre</label>
+                    <input class="w-full bg-surface-container-low border border-white/5 rounded-lg px-4 py-3 text-on-surface font-body-md form-input-focus placeholder:text-surface-variant transition-all" id="name" name="name" placeholder="Tu nombre" type="text" required/>
+                  </div>
+                  <div class="space-y-2">
+                    <label class="font-label-md text-label-md text-on-surface-variant" for="email">Correo electrónico</label>
+                    <input class="w-full bg-surface-container-low border border-white/5 rounded-lg px-4 py-3 text-on-surface font-body-md form-input-focus placeholder:text-surface-variant transition-all" id="email" name="email" placeholder="email@ejemplo.com" type="email" required/>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="font-label-md text-label-md text-on-surface-variant" for="subject">Asunto</label>
+                  <input class="w-full bg-surface-container-low border border-white/5 rounded-lg px-4 py-3 text-on-surface font-body-md form-input-focus placeholder:text-surface-variant transition-all" id="subject" name="subject" placeholder="¿En qué puedo ayudarte?" type="text" required/>
+                </div>
+                <div class="space-y-2">
+                  <label class="font-label-md text-label-md text-on-surface-variant" for="message">Mensaje</label>
+                  <textarea class="w-full bg-surface-container-low border border-white/5 rounded-lg px-4 py-3 text-on-surface font-body-md form-input-focus placeholder:text-surface-variant transition-all resize-none" id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                </div>
+                <button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary rounded-lg font-headline-sm text-label-md hover:bg-primary-container transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2" type="submit">
+                  Enviar Mensaje
+                  <span class="material-symbols-outlined text-xl">send</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface-container-lowest border-t border-white/5 py-12 w-full">
+    <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto gap-gutter text-center md:text-left">
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <span class="font-headline-sm text-headline-sm text-primary">Catalina Castillo</span>
+        <p class="font-label-md text-label-md text-on-surface-variant">© 2026 Catalina Castillo. Hecho con precisión.</p>
+      </div>
+      <div class="flex gap-gutter font-label-md text-label-md mt-6 md:mt-0">
+        <a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="https://github.com/Cataa97" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-colors cursor-pointer" href="https://www.linkedin.com/in/catalinacastillor/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
