@@ -13,25 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Initial check
 
-  // --- Mobile Menu Toggle ---
+  // --- Mobile Menu Toggle with Smooth Transitions ---
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    const toggleMenu = () => {
+      const isOpen = mobileMenu.classList.contains('opacity-100');
+      if (isOpen) {
+        // Close menu
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+      } else {
+        // Open menu
+        mobileMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      }
+      
       const icon = menuBtn.querySelector('.material-symbols-outlined');
       if (icon) {
-        icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+        icon.textContent = isOpen ? 'menu' : 'close';
       }
+    };
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
     });
 
     // Close mobile menu when clicking a link
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
         const icon = menuBtn.querySelector('.material-symbols-outlined');
         if (icon) icon.textContent = 'menu';
       });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const isOpen = mobileMenu.classList.contains('opacity-100');
+      if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+        const icon = menuBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = 'menu';
+      }
     });
   }
 
